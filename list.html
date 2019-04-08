@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <body>
+    <div class = 'notify-list' id="notify-list">
+       
+        </div>
+    <div class="nav list-nav">
+        <h2>JS Issue Tracker</h2>
+        <p class="assig-name">Assigned to  :   <span id='assig-name'></span></p>
+        </div>
+    
+        <div class ="issue-box" style="display: none">
+        <h5>Add New Issue:</h5>
+        <label for="description">Description*</label>
+            <input type="text" id="description" placeholder="Describe the issue ..." required>
+           
+            <label for="severity">Severity*</label>
+             <select name="severity" id="severity" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+          </select>
+            
+            <label for="description">Assigned To*</label>
+            <input type="text" placeholder="Enter responsible ..." id="assigned" required>
+            
+            <div class ="add-colors">
+                <div class="add-button" id="add-btn" >Add</div>
+                <div class ='card-color'>
+                    <div class ="colors color1" id="color1" ></div>
+                    <div class ="colors color2" id="color2"></div>
+                    <div class ="colors color3" id="color3"></div>
+                </div>
+            </div>
+            </div>
+            
+        
+        
+        <div class="issue-list" id="issue-list">
+       
+        
+            
+            
+        
+        </div>
+    
+    </body>
+
+
+    <script src="list.js"></script>
+
+</html>

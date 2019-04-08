@@ -1,0 +1,364 @@
+
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #EBECF1;
+}
+.nav{
+    background-image: linear-gradient(to right,#2CA8FF , #91D2FF);
+    height:150px;
+    padding: 20px;
+    text-align: center;
+}
+.list-nav{
+    background-image: linear-gradient(to right,#2CA8FF , #91D2FF);
+    height:100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav h2{
+    margin-top: 30px;
+    color: white;
+}
+
+.assig-name,#assig-name{
+    font-size: 1em;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 10px;
+}
+#assig-name{
+    font-weight: 700;
+}
+.issue-box{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    min-width: 90%;
+    padding: 20px;
+    background: white;
+    
+    box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 4px;
+    margin-top: -70px;
+}
+
+.issue-box h5 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.issue-box input ,#severity{
+    border-radius: 50px;
+    height: 20px;
+    outline: none;
+    border: solid 1px lightgray;
+    text-indent: 13px;
+    padding: 4px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 0.75em; 
+    
+}
+#severity{
+    height: 28px;
+    font-size: 0.75em; 
+}
+
+.issue-box input:focus{
+    border-color: #2CA8FF;
+    transition: 0.3s;
+}
+.issue-box label {
+ font-size: 0.8em;   
+}
+
+.issue-box input::placeholder{
+    font-size: 0.9em;
+}
+
+.issue-box .add-button {
+    width: 50px;
+    height: 18px;
+    padding: 5px;
+    text-align: center;
+    background-color: #2CA8FF ;
+    border: solid 1px #2CA8FF ;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.issue-box .add-button:hover{
+    opacity: 0.9;
+    transition: 0.3s;
+    box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    
+}
+
+.add-colors{
+    display: flex;
+    flex-direction: row;
+    
+}
+.card-color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 20px;
+  
+}
+
+.colors{
+    border-radius: 50%;
+    height:15px;
+    width: 15px;
+    margin: 5px;
+    cursor: pointer;
+    border:3px solid white;
+}
+
+.colors:hover{
+    border:3px solid  gray;
+}
+
+.color1{
+    background: #FFB236;
+}
+.color2{
+    background: #2CA8FF;
+}
+.color3{
+    background: #18CE0F;
+}
+.color4{
+    background: #F96332;
+}
+.color5{
+    background: #FF3636;
+}
+.issue-list{
+       display: flex;
+    flex-direction: column;
+    align-self: center;
+    min-width: 92.5%;
+    margin: 10px;
+    border-radius: 4px;
+
+}
+
+
+
+.issue-item{
+    width: auto;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 20px;
+    height: auto;
+    background: white;
+     box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: issueItem .6s;
+     word-wrap: break-word;
+    margin-bottom: 10px;
+  
+}
+
+
+
+.issue-item.hide-item{
+    animation: hideIssueItem .4s;
+}
+@keyframes issueItem {
+    from{opacity: 0; transform: scale(0.8)}
+    to {opacity: 1; transform: scale(1)}
+}
+@keyframes hideIssueItem {
+    from{opacity: 1; transform: scale(1))}
+    to {opacity: 0; transform: scale(0.7)}
+}
+.status{
+    background: #46B3FF;
+    width:50px;
+    padding: 3px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 0.7em;
+    text-align: center;
+    font-weight:500;
+    color:white;
+    border-radius: 4px;
+}
+
+.issue-item-desc {
+    font-size: 1.2em;
+    font-weight: 600;
+   
+}
+.descEdit{
+    border:none;
+    border-bottom: 1px solid black;
+    outline: none;
+    
+     font-size: 1.2em;
+    font-weight: 600;
+    width: 100%;
+    word-wrap: break-word;
+    background: transparent;
+    display: none;
+}
+
+.issue-item-sa{
+    display: flex;
+    font-size: 0.8em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.issute-item-assigned{
+    margin-left: 10px;
+}
+.issute-item-assigned:hover{
+    color:#67BEFC;
+    cursor: pointer;
+    transition: 0.3;
+}
+.issue-item-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.close-btn,.delete-btn,.edit-btn{
+    width: 60px;
+    padding: 4px;
+    font-size: 0.9em;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.id-text{
+   
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.issue-id{
+    font-weight: 400;
+}
+.close-btn{
+    background: darkgray;
+}
+
+.edit-btn{
+    background: white;
+    border: 1px solid green;
+    color: green;
+    margin-left: 10px;
+}
+.close-btn:hover,.delete-btn:hover,.edit-btn:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+    transition: .3s;
+}
+.delete-btn{
+    background: #FF5050;
+    margin-left: 10px;
+}
+.fa-clock,.fa-user{
+    margin-right: 5px;
+}
+
+
+.notify-list{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    min-width: 33%;
+}
+
+.warning-notify,.success-notify,.delete-notify,.status-notify{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: white;
+    margin: 5px;
+    font-weight: 600;
+    animation: showNotify .5s ;
+}
+@keyframes showNotify {
+    0% {opacity: 0; transform: translateY(-50px)}
+    
+      100% {opacity: 1; transform: translateY(0px)}
+}
+
+@keyframes hideNotify {
+    0% {opacity: 1; transform: translateY(0px)}
+      
+      100% {opacity: 0.5; transform: translateY(-50px)}
+}
+
+.hideNotify{
+    animation:  hideNotify .5s;
+}
+.warning-notify {
+    background:#FFBC50 ;
+      box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.success-notify {
+    background:#1BE611 ;
+      box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.delete-notify{
+     background:#FF5050;
+      box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.status-notify{
+     background:#46B3FF;
+      box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.fa-times{
+    cursor: pointer;
+}
+
+
+
+.hide{
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .issue-box{
+        min-width: 80%;
+    }
+  
+    .issue-item{
+         
+    }
+    .issue-list {
+          min-width: 89%;
+    }
+}
